@@ -1,271 +1,253 @@
 \documentclass[10pt]{beamer}
 \usetheme[
-%%% Modelo modificado para paleta de cores da UNB e apresentação com as logos disponibilizadas pelo próprio site da Universidade.
-%%% option passed to the outer theme
-%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
   ]{Feather}
-  
-% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
-
-% Change the bar colors:
-%\setbeamercolor{Feather}{fg=red!20,bg=red}
-
-% Change the color of the structural elements:
-%\setbeamercolor{structure}{fg=red}
-
-% Change the frame title text color:
-%\setbeamercolor{frametitle}{fg=blue}
-
-% Change the normal text color background:
-%\setbeamercolor{normal text}{fg=black,bg=gray!10}
-
-%-------------------------------------------------------
-% INCLUDE PACKAGES
-%-------------------------------------------------------
 
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazil]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
+\usepackage{hyperref}
 
-%-------------------------------------------------------
-% DEFFINING AND REDEFINING COMMANDS
-%-------------------------------------------------------
-
-% colored hyperlinks
-\newcommand{\chref}[2]{
-  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+\title[]% [] is optional
+{%
+  \textbf{Geração Automatizada de Testes Baseada em Model Checking:
+  \\ Um Estudo Aplicado ao e-Título}
 }
 
-%-------------------------------------------------------
-% INFORMATION IN THE TITLE PAGE
-%-------------------------------------------------------
-
-\title[] % [] is optional - is placed on the bottom of the sidebar on every slide
-{ % is placed on the title page
-      \textbf{Título}
-}
-
-\subtitle[Título curto]
+\subtitle[Geração Automatizada de Testes Baseada em Model Checking]
 {
-      \textbf{v. 1.0.0}
+  \textbf{Versão para Qualificação}
 }
 
-\author[Luís Fernando]
-{      Luís Fernando Marzola da Cunha \\
-      {\ttfamily fernandoluismc@gmail.com}
+\author[Thiago Fernandes]
+{Thiago Viana Fernandes \\
+  {\ttfamily thiagu.vf@gmail.com}
 }
 
 \institute[]
 {
-      Engenharia Aeroespacial, Faculdade do Gama\\
-      Universidade de Brasília\\
-  
-  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+  Programa de Pós-Graduação em Computação Aplicada\\
+  Universidade de Brasília
 }
 
 \date{\today}
 
-%-------------------------------------------------------
-% THE BODY OF THE PRESENTATION
-%-------------------------------------------------------
-
 \begin{document}
 
-%-------------------------------------------------------
-% THE TITLEPAGE
-%-------------------------------------------------------
-
-{\1% % this is the name of the PDF file for the background
-\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
-  \titlepage % call the title page information from above
+% Title page
+{%
+\begin{frame}[plain,noframenumbering]
+  \titlepage
 \end{frame}}
 
-
-\begin{frame}{Content}{}
+\begin{frame}{Sumário}{}
 \tableofcontents
 \end{frame}
 
-%-------------------------------------------------------
 \section{Introdução}
-%-------------------------------------------------------
-\subsection{Tipos de Queimadores}
-\begin{frame}{Introdução}{Queimadores}
-%-------------------------------------------------------
-
+\begin{frame}{Introdução}{Contexto e Motivação}
   \begin{itemize}
-      \item O que são?
-      \item Onde são usados?
-      \item Tipos de Queimadores
+    \item Importância da qualidade de software em sistemas críticos.
+    \item Limitações dos testes tradicionais para explorar todos os cenários possíveis.
+    \item Motivação para o uso de Model Checking como técnica complementar.
+    \item Contexto do \emph{e-Título} como sistema crítico do TSE.
   \end{itemize}
-  
-  
-  
 \end{frame}
 
-
-
-
-\begin{frame}{Introdução}{Queimadores Atmosféricos}
-
-
+\begin{frame}{Introdução}{Definição do Problema}
   \begin{itemize}
-      \item O que são?
-      \item Onde são usados?
-      \item Tipos de Queimadores Atmosféricos
+    \item Dificuldade em identificar falhas emergentes de interações entre componentes.
+    \item Ausência de integração consolidada entre testes automatizados e verificação formal.
+    \item Pergunta de pesquisa: a integração de Model Checking com testes melhora a detecção de falhas?
   \end{itemize}
-  
-  
-  
 \end{frame}
 
-
-
-
-
-
-
-
-
-%-------------------------------------------------------
-\section{Installation}
-%-------------------------------------------------------
-\subsection{Source files}
-\begin{frame}{Installation}{Source files}
-%-------------------------------------------------------
-
-\begin{block}{}
-The theme contains 4 source files:
+\section{Justificativa e Objetivos}
+\begin{frame}{Justificativa}{Relevância}
   \begin{itemize}
-    \item {\tt beamercolorthemeFeather.sty}
-    \item {\tt beamerouterthemeFeather.sty}
-    \item {\tt beamerinnerthemeFeather.sty}
-    \item {\tt beamerthemeFeather.sty}
+    \item \emph{e-Título} atende milhões de eleitores e exige alta confiabilidade.
+    \item Fluxos complexos (síncronos e assíncronos) aumentam riscos não cobertos por testes convencionais.
+    \item Model Checking complementa testes ao identificar interações e estados indesejados.
   \end{itemize}
-\end{block}
 \end{frame}
 
-%-------------------------------------------------------
-\subsection{Local and Global installation}
-\begin{frame}{Installation}{Local and Global installation}
-%-------------------------------------------------------
-  The theme can be installed for \textbf{local} or \textbf{global} use.
-  \pause
-  \begin{block}{Local Installation}
-  \begin{itemize}    
-    \item Local installation is the simplest way of installing the theme. 
-    \item You need to placing the 4 source files in the same folder as your presentation. When you download the theme, the 4 theme files are located in the {\tt local} folder.
-  \end{itemize}
-  \end{block}
-
-  \begin{block}{Global Installation}
+\begin{frame}{Objetivos}{Geral e Específicos}
   \begin{itemize}
-     \item If you wish to make the theme globally available, you must put the files in your local latex directory tree. The location of the root of the local directory tree depends on your operating system and the latex distribution. 
-     \item Detailed steps on how to proceed installation under various operating systems can be found at Beamer documentation.
+    \item \textbf{Objetivo Geral:} Guiar a definição de testes automatizados a partir de análises por Model Checking.
+    \item \textbf{Objetivos Específicos:}
+      \begin{itemize}
+        \item Investigar limitações dos testes automatizados atuais.
+        \item Explorar a viabilidade do Model Checking como complemento.
+        \item Definir um método semi-automatizado para geração de testes.
+        \item Aplicar e validar a metodologia no estudo de caso do \emph{e-Título}.
+      \end{itemize}
   \end{itemize}
-  \end{block}
 \end{frame}
-     
 
-%-------------------------------------------------------
-\subsection{Required Packages}
-\begin{frame}{Installation}{Required Packages}
-%-------------------------------------------------------
-
-  For using the Feather Theme you will need the Bemaer class installed and the following 2 packages
+\section{Estado da Arte}
+\begin{frame}{Estado da Arte}{Visão Geral}
   \begin{itemize}
-    \item TikZ\footnote{TikZ is a package for creating beautiful graphics. Have a look at these \chref{http://www.texample.net/tikz/examples/}{online examples} or the \chref{http://tug.ctan.org/tex-archive/graphics/pgf/base/doc/generic/pgf/pgfmanual.pdf}{pgf user manual}.}
-    \item calc
+    \item Revisão baseada em survey sobre testes de APIs REST e trabalhos posteriores.
+    \item Crescimento recente do uso de IA (LLMs) para geração e oráculos de teste.
+    \item Lacuna: poucas integrações entre técnicas formais (model checking) e frameworks de teste.
   \end{itemize}
-  Due to the fact that the packages are very common they should be included in your latex distribution in the first place.
 \end{frame}
 
-%-------------------------------------------------------
-\section{User Interface}
-\subsection{Loading the Theme and Theme Options}
-\begin{frame}{User Interface}{Loading the Theme and Theme Options}
-%-------------------------------------------------------
-
-  \begin{block}{The Presentation Theme}
-    The Feather Theme can be loaded in a familiar way. In the reamble of your {\tt tex} file you must type\\ \vspace{5pt} 
-    {\tt \textbackslash usetheme[<options>]\{Feather\}}\\ \vspace{5pt} 
-    The presentation theme loads the inner, outer and color Feather theme files and passes the {\tt <options>} on to these files.
-  \end{block}
-  \begin{block}{The Inner and Outher Themes}
-    If you wish you can load only the inner, or the outher theme directly by\\ \vspace{5pt} 
-    {\tt \textbackslash useinnertheme\{Feather\}} (and it has no options)\\ \vspace{5pt} 
-    {\tt \textbackslash useoutertheme[<options>]\{Feather\}} (it has one option)\\
-    \hspace{20pt}{\tt progressstyle=\{fixedCircCnt or movingCircCnt\}} \\
-    \begin{itemize}
-    \item which set how the progress is illustrated;
-    \item the value {\tt movingCircCnt} is the default.
-    \end{itemize}
-  \end{block}
+\begin{frame}{Estado da Arte}{Taxonomia para APIs REST}
+  \begin{itemize}
+    \item \textbf{Cobertura:} esquema (OpenAPI), código, métricas especializadas.
+    \item \textbf{Detecção de falhas:} erros 5xx, violações de esquema, violação de regras definidas.
+    \item \textbf{Desempenho:} tempo de resposta e latência (menos explorado).
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{User Interface}{Loading the Theme and Theme Options}
-
-  \begin{block}{The Color Theme}
-    Also you can load only the color theme by writing in the preamble of the {\tt tex} file 
-    
-    \vspace{5pt} 
-    
-    \begin{itemize}
-    \item {\tt \textbackslash usecolortheme\{Feather\}}
-    \end{itemize}
-    
-    \vspace{5pt}
-    
-    ...or to change the colors of the various elements in the theme
-    
-    \vspace{5pt} 
-    \begin{itemize}
-    \item Change the bar colors: \\    
-    {\tt \textbackslash setbeamercolor \{Feather\}\{fg=<color>, bg=<color>\}}
-    
-    \vspace{2pt} 
-    
-    \item Change the color of the structural elements: \\    
-    {\tt \textbackslash setbeamercolor\{structure\}\{fg=<color>\}}
-    
-    \vspace{2pt} 
-    
-    \item Change the frame title text color:\\
-    {\tt \textbackslash setbeamercolor\{frametitle\}\{fg=<color>\}}
-    
-    \vspace{2pt} 
-    
-    \item Change the normal text color background:    
-    {\tt \textbackslash setbeamercolor\{normal text\}\{fg=<color>, bg=<color>\}}
-    \end{itemize}
-  \end{block}
+\begin{frame}{Estado da Arte}{Limitações Observadas}
+  \begin{itemize}
+    \item Testes tendem a focar em cenários previsíveis e "happy path".
+    \item Oráculos fracos e restrições ocultas reduzem efetividade.
+    \item Pouca exploração de verificação formal aplicada a APIs REST em contexto industrial.
+  \end{itemize}
 \end{frame}
 
-
-%-------------------------------------------------------
-\subsection{Feather image}
-\begin{frame}{User Interface}{The Feather Background Image}
-%-------------------------------------------------------
-
-\begin{block}{The Feather Background Image}
-    \begin{itemize}
-    \item In Feather theme, the title page frame and the last frame have the Feather image as the background image. 
-    \item The Feather background image can be produced to any frame by wrating on the begining at the choosen frame the following
-    \end{itemize} 
-    
-    \vspace{5pt} 
-    
-  {\tt \{\textbackslash 1bg\\
-    \textbackslash begin\{frame\}[<options>]\{Frame Title\}\{Frame Subtitle\}\\
-    \ldots\\
-    \textbackslash end\{frame\}\}}
-\end{block}
+\section{Fundamentação Teórica}
+\begin{frame}{Fundamentação Teórica}{Testes de Software}
+  \begin{itemize}
+    \item Testes como atividades de Verificação, Validação e Teste (VV\&T).
+    \item Diferença entre verificação (conforme especificação) e validação (produto certo).
+    \item Limitações de testes unitários e importância de testes de integração para sistemas distribuídos.
+  \end{itemize}
 \end{frame}
 
+\begin{frame}{Fundamentação Teórica}{Model Checking}
+  \begin{itemize}
+    \item Exploração exaustiva do espaço de estados de um modelo formal.
+    \item Ferramentas: SPIN (Promela) e PRISM (modelos probabilísticos).
+    \item Dependência da qualidade do modelo e da formulação de propriedades (LTL).
+  \end{itemize}
+\end{frame}
 
-{\1
+\begin{frame}{Fundamentação Teórica}{Integração com Testes}
+  \begin{itemize}
+    \item Model Checking identifica cenários logicamente possíveis que violam propriedades.
+    \item Transformação de violações em contratos (Design by Contract) e casos de teste.
+    \item Geração de testes que validam se o sistema implementado realmente evita esses cenários.
+  \end{itemize}
+\end{frame}
+
+\section{Metodologia}
+\begin{frame}{Metodologia}{Visão Geral}
+  \begin{itemize}
+    \item Abordagem iterativa (PDCA): modelagem, verificação, extração de caminhos, teste.
+    \item Critérios de avaliação: cobertura, detecção de falhas e aplicabilidade prática.
+    \item Ferramentas e recursos: SPIN, Promela, ferramentas de teste para APIs REST.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Metodologia}{Etapas}
+  \begin{enumerate}
+    \item Construção do modelo Promela do fluxo alvo (onboarding).
+    \item Definição de propriedades LTL representando requisitos e invariantes.
+    \item Execução do SPIN e análise de contra-exemplos / violações.
+    \item Tradução de contra-exemplos em casos de teste automatizados (ex.: BDD).
+  \end{enumerate}
+\end{frame}
+
+\section{Modelagem do Onboarding}
+\begin{frame}{Modelagem}{Fluxos Modelados}
+  \begin{itemize}
+    \item Etapas modeladas: preenchimento de dados biográficos, carrossel de perguntas, senha e verificação biométrica.
+    \item Uso de processos concorrentes em Promela para representar interações reais.
+    \item Geração de grafo de estados para análise de propriedades e métricas.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Modelagem}{Métricas e Mapeamentos}
+  \begin{itemize}
+    \item Aplicação de métricas especializadas para avaliar representatividade do modelo.
+    \item Mapeamento entre endpoints REST e transições do modelo (tabela de mapeamento).
+    \item Importância do alinhamento entre implementação e modelo.
+  \end{itemize}
+\end{frame}
+
+\section{Aplicação do SPIN e Propriedades}
+\begin{frame}{SPIN e LTL}{Definição de Propriedades}
+  \begin{itemize}
+    \item Propriedades LTL formuladas para capturar comportamentos esperados (ex.: sequências inválidas).
+    \item Verificação busca contra-exemplos, ciclos de aceitação e violações.
+    \item Tradução das propriedades violadas em cláusulas de Design by Contract (DbC).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{SPIN e LTL}{Exemplos e Observações}
+  \begin{itemize}
+    \item Observação de acceptance cycles e análise das causas.
+    \item Extração de caminhos de execução a partir de contra-exemplos.
+    \item Conversão dos passos do contra-exemplo em passos de um caso de teste BDD.
+  \end{itemize}
+\end{frame}
+
+\section{Geração de Casos de Teste}
+\begin{frame}{Geração de Testes}{Fluxo de Geração}
+  \begin{itemize}
+    \item Cada violação no modelo descreve um cenário lógico possível.
+    \item Cenários são convertidos em scripts de teste automáticos ou em BDD (Given-When-Then).
+    \item Integração com frameworks de teste para executabilidade contra a API real.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Geração de Testes}{Exemplo (Resumo)}
+  \begin{itemize}
+    \item Contra-exemplo: usuário que falha no carrossel e consegue pular etapa X.
+    \item Conversão: sequência de chamadas REST e dados de entrada para reproduzir o cenário.
+    \item Resultado: teste detecta comportamento indevido no sistema real.
+  \end{itemize}
+\end{frame}
+
+\section{Resultados e Análises}
+\begin{frame}{Resultados}{Principais Achados}
+  \begin{itemize}
+    \item Identificação de inconsistências no fluxo de onboarding do \emph{e-Título}.
+    \item Tradução sistemática de LTL violadas para contratos DbC e casos de teste.
+    \item Demonstração de aplicabilidade da metodologia em um caso real.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados}{Limitações}
+  \begin{itemize}
+    \item Dependência da qualidade e fidelidade do modelo Promela.
+    \item Escalabilidade do Model Checking para modelos muito grandes.
+    \item Necessidade de revisão humana nos artefatos gerados (ex.: scripts de teste).
+  \end{itemize}
+\end{frame}
+
+\section{Conclusão e Trabalhos Futuros}
+\begin{frame}{Conclusão}{Síntese}
+  \begin{itemize}
+    \item A integração entre Model Checking e testes automatizados aumenta a robustez da validação.
+    \item Método aplicável ao \emph{e-Título} com resultados promissores.
+    \item Recomenda-se aumento da automação e ampliação do escopo (mais fluxos e serviços).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Trabalhos Futuros}{Direções}
+  \begin{itemize}
+    \item Automação completa da transformação de contra-exemplos em testes executáveis.
+    \item Explorar modelos probabilísticos (PRISM) para situações estocásticas.
+    \item Integração com ferramentas de IA para auxiliar na geração de dados de teste e oráculos.
+  \end{itemize}
+\end{frame}
+
+\section{Referências}
+\begin{frame}{Referências}{Documento-base}
+  \begin{itemize}
+    \item Dissertação: Thiago Viana Fernandes (2025). ``Geração Automatizada de Testes Baseada em Model Checking: Um Estudo Aplicado ao e-Título''. (arquivo fonte em: \texttt{/mnt/data/56327998-111e-4b62-aa48-b2f9c8428b40.pdf})
+    \item Seleção de trabalhos citados na dissertação (survey sobre testes de APIs, SPIN, Promela, DbC).
+  \end{itemize}
+\end{frame}
+
+{
 \begin{frame}[plain,noframenumbering]
-  \finalpage{Thank you for using Feather Beamer Theme!}
+  \finalpage{Obrigado!}
 \end{frame}}
 
 \end{document}
