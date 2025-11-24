@@ -7,6 +7,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
 
 \title[]% [] is optional
 {%
@@ -43,6 +50,11 @@
 \begin{frame}{Sumário}{}
 \tableofcontents
 \end{frame}
+\note{
+  <<Explicar rapidamente a estrutura da apresentação.>>
+  <<Comentar que segue a estrutura da dissertação: fundamentação → metodologia → resultados → conclusão.>>
+  <<Focando nos pontos essenciais.>>
+}
 
 \section{Introdução}
 \begin{frame}{Introdução}{Contexto e Motivação}
@@ -53,6 +65,40 @@
     \item Contexto do \emph{e-Título} como sistema crítico do TSE.
   \end{itemize}
 \end{frame}
+\note{
+  <<Contextualizar a crescente complexidade dos sistemas e a dificuldade de garantir confiabilidade.>>
+  <<Destacar que testes tradicionais não exploram completamente o espaço de possibilidades.>>
+  <<Conectar com a criticidade do e-Título e a necessidade de métodos formais.>>
+}
+
+
+\section{Introdução}
+\begin{frame}{Introdução}{Contexto e Motivação}
+  \newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\begin{table}[H]
+    \centering
+    \begin{threeparttable}
+        \caption{Quantidade de downloads do aplicativo e-Título}
+        \label{tab:downloads-etitulo}
+        \begin{tabularx}{\linewidth}{|c|c|Y|Y|}
+            \hline
+            \textbf{Ano} & \textbf{Eleitoral} & \textbf{iOS} & \textbf{Android} \\ \hline
+            2019 & Não & 328.397 & 14.292.413\tnote{*} \\ \hline
+            2020 & Sim & 4.240.474 & 17.505.366 \\ \hline
+            2021 & Não & 1.434.842 & 4.498.665 \\ \hline
+            2022 & Sim & 11.538.108 & 19.512.395 \\ \hline
+            2023 & Não & 3.429.769 & 4.203.042 \\ \hline
+            2024 & Sim & 13.611.919 & 15.924.420 \\ \hline
+            2025 & Não & 4.565.176\tnote{**} & 5.040.111\tnote{**} \\ \hline
+        \end{tabularx}
+    \end{threeparttable}
+\end{table}
+\note{* Valor acumulado de anos anteriores.
+** Dados referentes ao período até novembro de 2025.}
+Tendo um total de 57.143.504 de eleitores com e-Título ativo em novembro de 2025.
+\end{frame}
+
 
 \begin{frame}{Introdução}{Definição do Problema}
   \begin{itemize}
