@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  25 NOV 2025 06:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  13 DEC 2025 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -903,7 +903,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./Feathertheme.nav)
-<Feathergraphics/as_vert_cor.jpg, id=63, 711.65875pt x 654.445pt>
+<Feathergraphics/as_vert_cor.jpg, id=59, 711.65875pt x 654.445pt>
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
 Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 42.
@@ -1003,7 +1003,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 100.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 99.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1011,7 +1011,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 100.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 99.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [4
@@ -1019,7 +1019,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 110.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 109.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1027,7 +1027,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 110.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 109.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [5
@@ -1035,7 +1035,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 124.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 123.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1043,7 +1043,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 124.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 123.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [6
@@ -1051,23 +1051,23 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 142.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 141.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 142.
+(Font)              <9> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 142.
+(Font)              <6> on input line 141.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 142.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 141.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 142.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 141.
 
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 142.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 141.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [7
@@ -1075,7 +1075,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 151.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 155.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1083,7 +1083,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 151.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 155.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [8
@@ -1091,7 +1091,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 159.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 163.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1099,7 +1099,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 159.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 163.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [9
@@ -1107,7 +1107,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 167.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 171.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1115,7 +1115,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 167.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 171.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [10
@@ -1123,7 +1123,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 176.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 180.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1131,7 +1131,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 176.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 180.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [11
@@ -1139,7 +1139,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 184.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 188.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1147,7 +1147,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 184.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 188.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [12
@@ -1155,7 +1155,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 192.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 196.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1163,7 +1163,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 192.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 196.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [13
@@ -1171,7 +1171,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 201.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 205.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1179,7 +1179,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 201.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 205.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [14
@@ -1187,7 +1187,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 210.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 214.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1195,7 +1195,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 210.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 214.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [15
@@ -1203,7 +1203,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 219.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 223.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1211,7 +1211,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 219.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 223.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [16
@@ -1219,7 +1219,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 227.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 231.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1227,7 +1227,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 227.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 231.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [17
@@ -1235,7 +1235,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 236.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 240.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1243,7 +1243,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 236.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 240.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [18
@@ -1251,7 +1251,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 244.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 248.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1259,7 +1259,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 244.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 248.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [19
@@ -1267,7 +1267,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 253.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 257.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1275,7 +1275,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 253.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 257.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [20
@@ -1283,7 +1283,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 261.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 265.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1291,7 +1291,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 261.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 265.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [21
@@ -1299,7 +1299,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 270.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 274.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1307,7 +1307,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 270.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 274.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [22
@@ -1315,7 +1315,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 278.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 282.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1323,7 +1323,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 278.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 282.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [23
@@ -1331,7 +1331,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 287.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 291.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1339,7 +1339,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 287.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 291.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [24
@@ -1347,7 +1347,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 295.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 299.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1355,7 +1355,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 295.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 299.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [25
@@ -1363,7 +1363,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 303.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 307.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1371,7 +1371,7 @@ Missing character: There is no ; in font nullfont!
 
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 303.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 307.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 Missing character: There is no ; in font nullfont!
 [26
@@ -1379,7 +1379,7 @@ Missing character: There is no ; in font nullfont!
 ]
 File: Feathergraphics/as_vert_cor.jpg Graphic file (type jpg)
 <use Feathergraphics/as_vert_cor.jpg>
-Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 308.
+Package pdftex.def Info: Feathergraphics/as_vert_cor.jpg  used on input line 312.
 (pdftex.def)             Requested size: 26.07742pt x 23.97641pt.
 
 Missing character: There is no ; in font nullfont!
@@ -1403,21 +1403,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Feathertheme.out' has not changed.
-(rerunfilecheck)             Checksum: E21332E12462E4B03CC65AFE2A3F6CB4;1784.
+(rerunfilecheck)             Checksum: E10B6D40A3E0E90189C4D66DAFA53103;1683.
  ) 
 Here is how much of TeX's memory you used:
- 28422 strings out of 473190
- 558681 string characters out of 5715799
- 921573 words of memory out of 5000000
- 51013 multiletter control sequences out of 15000+600000
+ 28417 strings out of 473190
+ 558633 string characters out of 5715799
+ 921574 words of memory out of 5000000
+ 51009 multiletter control sequences out of 15000+600000
  643305 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,439b,942s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Feathertheme.pdf (27 pages, 469030 bytes).
+Output written on Feathertheme.pdf (27 pages, 469532 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
