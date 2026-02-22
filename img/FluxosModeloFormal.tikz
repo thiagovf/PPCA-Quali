@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    [artefato/.style={rectangle,draw=black, thick, inner sep=10pt, minimum size=15mm, rounded corners, align=center},
+     atividade/.style={circle, draw=black, thick, inner sep=10pt, minimum size=15mm, align=center}]
+
+    % node (name) at (,) [type]{label};
+    \node[artefato] (def_alt_niv) at(0,6)  {Definição em \\alto nível};
+    \node[artefato] (cod_api)     at(0,3)  {Código API};
+    \node[artefato] (mod_form)    at(0,0)  {Modelo \\Formal};
+    \node[atividade](valid)       at(5,0)  {Verificação \\propriedades \\LTL};
+    \node[artefato] (claus_dbc)   at(11,0) {Cláusulas \\DBC};
+
+    \node[above] at (valid.south) {$\phi = \cdots$};
+
+    \draw [-{Stealth}, thick] (def_alt_niv) -- node[auto, swap] {\textit{interpretação}} (cod_api);
+    \draw [-{Stealth[green!200]}, thick, color=green] (cod_api) -- node[auto, swap]{\textit{modelagem}} (mod_form);
+    \draw [-{Stealth}, thick] (mod_form) -- node[auto]{\textit{verificação}} (valid);
+    \draw [-{Stealth[orange]}, thick, color=orange] (valid) -- node[auto]{\textit{extr. cláusulas}} (claus_dbc);
+    \draw [-{Stealth}, thick] (valid) to [bend left=45] node [auto]{\textit{ajustes modelo}} (mod_form);
+    \draw [-{Stealth}, thick] (valid) to [bend right=20] node[auto, swap]{\textit{ajustes código}} (cod_api);
+    \draw [-{Stealth[red]}, thick, color=red] (claus_dbc) to [bend right=30] node[auto, swap]{\textit{especificações DBC}} (cod_api);
+
+\end{tikzpicture}

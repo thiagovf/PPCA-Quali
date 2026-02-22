@@ -14,6 +14,9 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{trees, shapes.geometric, positioning, arrows.meta, calc}
+
 
 \title[]% [] is optional
 {%
@@ -47,278 +50,165 @@
   \titlepage
 \end{frame}}
 
-\begin{frame}{Sumário}{}
-\tableofcontents
-\end{frame}
-\note{
-  <<Explicar rapidamente a estrutura da apresentação.>>
-  <<Comentar que segue a estrutura da dissertação: fundamentação → metodologia → resultados → conclusão.>>
-  <<Focando nos pontos essenciais.>>
-}
-
 \section{Introdução}
-\begin{frame}{Introdução}{Contexto e Motivação}
+\begin{frame}{Motivação}{Contexto}
   \begin{itemize}
-    \item Importância da qualidade de software em sistemas críticos.
-    \item Limitações dos testes tradicionais para explorar todos os cenários possíveis.
-    \item Motivação para o uso de Model Checking como técnica complementar.
-    \item Contexto do \emph{e-Título} como sistema crítico do TSE.
-  \end{itemize}
-\end{frame}
-\note{
-  <<Contextualizar a crescente complexidade dos sistemas e a dificuldade de garantir confiabilidade.>>
-  <<Destacar que testes tradicionais não exploram completamente o espaço de possibilidades.>>
-  <<Conectar com a criticidade do e-Título e a necessidade de métodos formais.>>
-}
-
-
-\begin{frame}{Introdução}{Números do e-Título}
-  \newcolumntype{Y}{>{\centering\arraybackslash}X}
-
-\begin{table}[H]
-    \centering
-    \begin{threeparttable}
-        \caption{Quantidade de downloads do aplicativo e-Título}
-        \label{tab:downloads-etitulo}
-        \begin{tabularx}{\linewidth}{|c|c|Y|Y|}
-            \hline
-            \textbf{Ano} & \textbf{Eleitoral} & \textbf{iOS} & \textbf{Android} \\ \hline
-            2019 & Não & 328.397 & 14.292.413\tnote{*} \\ \hline
-            2020 & Sim & 4.240.474 & 17.505.366 \\ \hline
-            2021 & Não & 1.434.842 & 4.498.665 \\ \hline
-            2022 & Sim & 11.538.108 & 19.512.395 \\ \hline
-            2023 & Não & 3.429.769 & 4.203.042 \\ \hline
-            2024 & Sim & 13.611.919 & 15.924.420 \\ \hline
-            2025 & Não & 4.565.176\tnote{**} & 5.040.111\tnote{**} \\ \hline
-        \end{tabularx}
-    \end{threeparttable}
-\end{table}
-\note{* Valor acumulado de anos anteriores.
-** Dados referentes ao período até novembro de 2025.}
-Tendo um total de 57.143.504 de eleitores com e-Título ativo em novembro de 2025.
-\end{frame}
-
-
-
-\begin{frame}{Introdução}{Definição do Problema}
-  \begin{itemize}
-    \item Dificuldade em identificar falhas emergentes de interações entre componentes.
-    \item Ausência de mecanismos consolidados de integração entre testes automatizados e verificação formal.
-    \item Pergunta de pesquisa: a integração de Model Checking com testes melhora a detecção de falhas?
-  \end{itemize}
-\end{frame}
-\note{
-  <<Explicar que sistemas distribuídos apresentam falhas emergentes (comportamentos incorretos do sistema que não estão presentes em nenhum componente isoladamente, mas surgem apenas da interação entre múltiplos componentes).>>
-  <<Mencionar exemplos típicos: condições de corrida, estados inconsistente entre serviços, ordem incorreta de operações.>>
-  <<Destacar a lacuna entre testes automatizados atuais e técnicas formais, a motivação da pergunta de pesquisa.>>
-}
-
-\section{Justificativa e Objetivos}
-\begin{frame}{Justificativa}{Relevância}
-  \begin{itemize}
-    \item \emph{e-Título} atende milhões de eleitores e exige alta confiabilidade.
-    \item Fluxos complexos (síncronos e assíncronos) aumentam riscos não cobertos por testes convencionais.
-    \item Model Checking complementa testes ao identificar interações e estados indesejados.
-  \end{itemize}
-\end{frame}
-\note{
-  <<Reforçar a relevância institucional do e-Título para milhões de eleitores.>>
-  <<Destacar o comportamento híbrido síncrono/assíncrono dos fluxos do onboarding.>>
-  <<Argumentar que MC ajuda a antecipar cenários impossíveis de prever manualmente.>>
-}
-
-\section{Contribuições esperadas}
-\begin{frame}{Contribuições esperadas}{}
-  \begin{itemize}
-    \item \textbf{Acadêmica:} preencher lacuna entre testes automatizados e verificação formal em sistemas.
-    \item \textbf{Institucional:} benefícios tangíveis para a Justiça Eleitoral na validação do e-Título.
-  \end{itemize}
-\end{frame}
-\note{
-  
-}
-
-\begin{frame}{Objetivos}{Geral e Específicos}
-  \begin{itemize}
-    \item \textbf{Objetivo Geral:} Guiar a definição de testes automatizados a partir de análises por Model Checking.
-    \item \textbf{Objetivos Específicos:}
-      \begin{itemize}
-        \item Investigar limitações dos testes automatizados atuais.
-        \item Explorar a viabilidade do Model Checking como complemento.
-        \item Definir um método semi-automatizado para geração de testes.
-        \item Aplicar e validar a metodologia no estudo de caso do \emph{e-Título}.
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-\note{
-  <<Conectar o objetivo geral à pergunta de pesquisa.>>
-  <<Mostrar que os objetivos específicos se dividem entre fundamentação, método e aplicação.>>
-  <<Reforçar que o modelo e o método serão validados com o caso e-Título.>>
-}
-
-\section{Estado da Arte}
-\begin{frame}{Estado da Arte}{Visão Geral}
-  \begin{itemize}
-    \item Revisão baseada em survey sobre testes de APIs REST e trabalhos posteriores.
-    \item Crescimento recente do uso de IA (LLMs) para geração e oráculos de teste.
-    \item Lacuna: poucas integrações entre técnicas formais (model checking) e frameworks de teste.
-  \end{itemize}
-\end{frame}
-\note{
-  <<Foram encontrados 27 trabalhos posteriores ao survey de 2023 (em 2025-2025).>>
-  <<>>
-  <<Reforçar que o modelo e o método serão validados com o caso e-Título.>>
-}
-
-\begin{frame}{Estado da Arte}{Taxonomia para APIs REST}
-  \begin{itemize}
-    \item \textbf{Cobertura:} esquema (OpenAPI), código, métricas especializadas.
-    \item \textbf{Detecção de falhas:} erros 5xx, violações de esquema, violação de regras definidas.
-    \item \textbf{Desempenho:} tempo de resposta e latência (menos explorado).
+    \item APIs REST são base de sistemas modernos e críticos.
+    \item Erros de integração frequentemente não são detectados por testes tradicionais.
+    \item Testes manuais e exploratórios possuem baixa sistematização.
+    \item Há lacuna entre modelos formais e práticas de teste de software.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Estado da Arte}{Limitações Observadas}
+\begin{frame}{Problema}{Desafio}
   \begin{itemize}
-    \item Testes tendem a focar em cenários previsíveis e "happy path".
-    \item Oráculos fracos e restrições ocultas reduzem efetividade.
-    \item Pouca exploração de verificação formal aplicada a APIs REST em contexto industrial.
+    \item Como gerar testes de integração de forma sistemática e baseada em especificação?
+    \item Como garantir coerência entre regras de negócio, serviços REST e testes?
+    \item Como explorar contra-exemplos de Model Checking além da verificação?
   \end{itemize}
 \end{frame}
 
-\section{Fundamentação Teórica}
-\begin{frame}{Fundamentação Teórica}{Testes de Software}
+\begin{frame}{Ideia Central}{Visão Geral}
   \begin{itemize}
-    \item Testes como atividades de Verificação, Validação e Teste (VV\&T).
-    \item Diferença entre verificação (conforme especificação) e validação (produto certo).
-    \item Limitações de testes unitários e importância de testes de integração para sistemas distribuídos.
+    \item Modelar comportamento do sistema.
+    \item Verificar propriedades com Model Checking.
+    \item Usar contra-exemplos como fonte de contratos e testes.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fundamentação Teórica}{Model Checking}
+
+
+\begin{frame}{Fundamentação}{Model Checking}
   \begin{itemize}
-    \item Exploração exaustiva do espaço de estados de um modelo formal.
-    \item Ferramentas: SPIN (Promela) e PRISM (modelos probabilísticos).
-    \item Dependência da qualidade do modelo e da formulação de propriedades (LTL).
+    \item Técnica formal para verificação automática de propriedades.
+    \item Baseada em exploração exaustiva de estados.
+    \item Propriedades expressas em LTL.
+    \item Ferramenta utilizada: SPIN.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fundamentação Teórica}{Integração com Testes}
+\begin{frame}{Fundamentação}{Design by Contract}
   \begin{itemize}
-    \item Model Checking identifica cenários logicamente possíveis que violam propriedades.
-    \item Transformação de violações em contratos (Design by Contract) e casos de teste.
-    \item Geração de testes que validam se o sistema implementado realmente evita esses cenários.
+    \item Pré-condições.
+    \begin{figure}[hb]
+	    \resizebox{0.3\textwidth}{!}{
+        \input{img/dbc-precond.tikz}
+      }
+    \end{figure}
+    \item Pós-condições.
+    \begin{figure}[hb]
+	    \resizebox{0.3\textwidth}{!}{
+        \input{img/dbc-poscond.tikz}
+      }
+    \end{figure}
+    \item Invariantes.
+    \begin{figure}[hb]
+	    \resizebox{0.3\textwidth}{!}{
+        \input{img/dbc-invariante.tikz}
+      }
+    \end{figure}
+    \item Contratos como oráculos de teste.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Fundamentação}{Testes de Integração}
+  \begin{itemize}
+    \item Validação de contratos da API.
+    \item Sequências de chamadas.
+    \item Estados intermediários.
+    \item OpenAPI como suporte à especificação.
   \end{itemize}
 \end{frame}
 
-\section{Metodologia}
-\begin{frame}{Metodologia}{Visão Geral}
+\begin{frame}{Método Proposto}{Visão Geral}
   \begin{itemize}
-    \item Abordagem iterativa (PDCA): modelagem, verificação, extração de caminhos, teste.
-    \item Critérios de avaliação: cobertura, detecção de falhas e aplicabilidade prática.
-    \item Ferramentas e recursos: SPIN, Promela, ferramentas de teste para APIs REST.
+    \item Modelagem comportamental em Promela.
+    \item Definição de propriedades LTL.
+    \item Execução do Model Checker.
+    \item Extração de contra-exemplos.
+    \item Geração de contratos e testes.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Método Proposto}{Visão Geral}
+  \begin{center}
+    \begin{figure}[hb]
+	    \resizebox{0.9\textwidth}{!}{
+        \input{img/FluxosModeloFormal.tikz}
+      }
+    \end{figure}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Método Proposto}{Modelagem}
+  \begin{itemize}
+    \item Processos representando serviços.
+    \item Estados explícitos.
+    \item Comunicação por variáveis globais.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Metodologia}{Etapas}
-  \begin{enumerate}
-    \item Construção do modelo Promela do fluxo alvo (onboarding).
-    \item Definição de propriedades LTL representando requisitos e invariantes.
-    \item Execução do SPIN e análise de contra-exemplos / violações.
-    \item Tradução de contra-exemplos em casos de teste automatizados (ex.: BDD).
-  \end{enumerate}
+\begin{frame}{Método Proposto}{Propriedades}
+  \begin{itemize}
+    \item Especificam comportamentos esperados.
+    \item Exemplo: após carrossel válido, senha deve ser definida.
+  \end{itemize}
+
+\begin{center}
+  \texttt{[] (carrossel\_ok -> <> senha\_definida)}
+\end{center}
+
 \end{frame}
 
-\section{Modelagem do Onboarding}
-\begin{frame}{Modelagem}{Fluxos Modelados}
+\begin{frame}{Método Proposto}{Contra-exemplo}
   \begin{itemize}
-    \item Etapas modeladas: preenchimento de dados biográficos, carrossel de perguntas, senha e verificação biométrica.
-    \item Uso de processos concorrentes em Promela para representar interações reais.
-    \item Geração de grafo de estados para análise de propriedades e métricas.
+    \item Caminho que viola propriedade.
+    \item Sequência concreta de estados.
+    \item Evidência de falha lógica.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Modelagem}{Métricas e Mapeamentos}
+\begin{frame}{Método Proposto}{Derivação de Contratos}
   \begin{itemize}
-    \item Aplicação de métricas especializadas para avaliar representatividade do modelo.
-    \item Mapeamento entre endpoints REST e transições do modelo (tabela de mapeamento).
-    \item Importância do alinhamento entre implementação e modelo.
+    \item Estados iniciais → pré-condições.
+    \item Estado final inválido → pós-condição.
+    \item Regras como cláusulas formais.
   \end{itemize}
 \end{frame}
 
-\section{Aplicação do SPIN e Propriedades}
-\begin{frame}{SPIN e LTL}{Definição de Propriedades}
+\begin{frame}{Método Proposto}{Geração de Testes}
   \begin{itemize}
-    \item Propriedades LTL formuladas para capturar comportamentos esperados (ex.: sequências inválidas).
-    \item Verificação busca contra-exemplos, ciclos de aceitação e violações.
-    \item Tradução das propriedades violadas em cláusulas de Design by Contract (DbC).
+    \item Pré-condições → dados de entrada.
+    \item Sequência → passos do teste.
+    \item Pós-condições → asserções.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{SPIN e LTL}{Exemplos e Observações}
+\begin{frame}{Estudo de Caso}{Aplicativo e-Título}
   \begin{itemize}
-    \item Observação de acceptance cycles e análise das causas.
-    \item Extração de caminhos de execução a partir de contra-exemplos.
-    \item Conversão dos passos do contra-exemplo em passos de um caso de teste BDD.
+    \item Fluxo de onboarding.
+    \item Carrossel, senha e biometria.
+    \item Sistema real e crítico.
   \end{itemize}
 \end{frame}
 
-\section{Geração de Casos de Teste}
-\begin{frame}{Geração de Testes}{Fluxo de Geração}
+\begin{frame}{Resultados}{Síntese}
   \begin{itemize}
-    \item Cada violação no modelo descreve um cenário lógico possível.
-    \item Cenários são convertidos em scripts de teste automáticos ou em BDD (Given-When-Then).
-    \item Integração com frameworks de teste para executabilidade contra a API real.
+    \item Propriedades violadas identificadas.
+    \item Contratos derivados automaticamente.
+    \item Casos de teste obtidos.
+    \item Detecção de cenários não cobertos.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Geração de Testes}{Exemplo (Resumo)}
-  \begin{itemize}
-    \item Contra-exemplo: usuário que falha no carrossel e consegue pular etapa X.
-    \item Conversão: sequência de chamadas REST e dados de entrada para reproduzir o cenário.
-    \item Resultado: teste detecta comportamento indevido no sistema real.
-  \end{itemize}
-\end{frame}
-
-\section{Resultados e Análises}
-\begin{frame}{Resultados}{Principais Achados}
-  \begin{itemize}
-    \item Identificação de inconsistências no fluxo de onboarding do \emph{e-Título}.
-    \item Tradução sistemática de LTL violadas para contratos DbC e casos de teste.
-    \item Demonstração de aplicabilidade da metodologia em um caso real.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Resultados}{Limitações}
-  \begin{itemize}
-    \item Dependência da qualidade e fidelidade do modelo Promela.
-    \item Escalabilidade do Model Checking para modelos muito grandes.
-    \item Necessidade de revisão humana nos artefatos gerados (ex.: scripts de teste).
-  \end{itemize}
-\end{frame}
-
-\section{Conclusão e Trabalhos Futuros}
 \begin{frame}{Conclusão}{Síntese}
   \begin{itemize}
-    \item A integração entre Model Checking e testes automatizados aumenta a robustez da validação.
-    \item Método aplicável ao \emph{e-Título} com resultados promissores.
-    \item Recomenda-se aumento da automação e ampliação do escopo (mais fluxos e serviços).
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Trabalhos Futuros}{Direções}
-  \begin{itemize}
-    \item Automação completa da transformação de contra-exemplos em testes executáveis.
-    \item Explorar modelos probabilísticos (PRISM) para situações estocásticas.
-    \item Integração com ferramentas de IA para auxiliar na geração de dados de teste e oráculos.
-  \end{itemize}
-\end{frame}
-
-\section{Referências}
-\begin{frame}{Referências}{Documento-base}
-  \begin{itemize}
-    \item Dissertação: Thiago Viana Fernandes (2025). ``Geração Automatizada de Testes Baseada em Model Checking: Um Estudo Aplicado ao e-Título''. (arquivo fonte em: \texttt{/mnt/data/56327998-111e-4b62-aa48-b2f9c8428b40.pdf})
-    \item Seleção de trabalhos citados na dissertação (survey sobre testes de APIs, SPIN, Promela, DbC).
+    \item Proposta de integração entre Model Checking, Design by Contract e testes de APIs REST.
+    \item Demonstração de que contra-exemplos podem ser sistematicamente convertidos em cláusulas contratuais e casos de teste.
+    \item Evidência de que a abordagem auxilia na identificação de falhas lógicas e de uso indevido de serviços.
+    \item Validação em um fluxo real do aplicativo e-Título.
   \end{itemize}
 \end{frame}
 

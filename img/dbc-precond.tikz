@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+  [state/.style={circle,draw=black,minimum size=8mm},
+   guard/.style={align=center,font=\itshape}]
+
+  % Estados
+  \node(s0) at (0,0) [state] {$s_0$};
+  \node(s1) at (3,0) [state] {$s_1$};
+
+  % Transição com pré-condição
+  \draw [-{Stealth[round]}] (s0) to node[above,guard] {$[x > 0]$} (s1);
+
+\end{tikzpicture}

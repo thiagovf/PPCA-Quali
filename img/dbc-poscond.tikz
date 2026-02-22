@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+  [state/.style={circle,draw=black,minimum size=8mm},
+   post/.style={align=center,font=\itshape}]
+
+  % Estados
+  \node(s0) at (0,0) [state] {$s_0$};
+  \node(s1) at (3,0) [state] {$s_1$};
+
+  % Transição
+  \draw [-{Stealth[round]}] (s0) to (s1);
+
+  % Pós-condição
+  \node at (s1.south) [post,below] {$\{y = 1\}$};
+
+\end{tikzpicture}
