@@ -580,6 +580,11 @@ INPUT ./Feathergraphics/as_vert_cor.jpg
 INPUT ./Feathergraphics/as_vert_cor.jpg
 INPUT ./Feathergraphics/as_vert_cor.jpg
 INPUT ./Feathergraphics/as_vert_cor.jpg
+INPUT ./img/EstadosOnBoarding.tikz
+INPUT ./img/EstadosOnBoarding.tikz
+INPUT img/EstadosOnBoarding.tikz
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmss9.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmsso9.tfm
 INPUT ./Feathergraphics/as_vert_cor.jpg
 INPUT ./Feathergraphics/as_vert_cor.jpg
 INPUT ./Feathergraphics/as_vert_cor.jpg
@@ -611,7 +616,10 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss9.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso9.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

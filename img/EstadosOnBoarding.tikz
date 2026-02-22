@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+    [initial/.style={circle,draw=black,fill=black,thick}, 
+     state/.style={circle,draw=black,fill=white,thick, minimum size=11mm},
+     decision/.style={diamond,draw=black,fill=white,thick, minimum size=6mm},
+     final/.style={circle,draw=black, fill=black, thick, double}]
+     \node[initial] (inicial) {};
+     \node[state] (dados_cadastrais) [right=of inicial] {$s_1$};
+     \node[state] (carrossel) [right=of dados_cadastrais] {$s_2$};
+     \node[state] (user_senha) [right=of carrossel] {$s_3$};
+     \node[decision, align=center] (quest_biometria) [right=of user_senha] {\small Biometria? \\ $s_5$};
+     \node[state] (biometria) [right=of quest_biometria] {$s_6$};
+     \node[decision] (aprovado) [right=of biometria] {$s_7$};
+     \node[state] (etituloEmitido) [right=of aprovado] {$s_8$};
+     \node[state] (bloqueado) [below=of carrossel] {$s_4$};
+     \node[state] (etituloReduzido) [below=of etituloEmitido] {$s_9$};
+     \node[final] (final) [right=of etituloEmitido] {};
+
+     % nodos de texto
+     \node [below, align=center] at (inicial.south) {$s_0$};
+     \node [above, align=center] at (dados_cadastrais.north) {Dados\\ cadastrais};
+     \node [above, align=center] at (carrossel.north) {Carrossel};
+     \node [below, align=center] at (bloqueado.south) {Bloqueado};
+     \node [above, align=center] at (user_senha.north) {Usuário\\e senha};
+     \node [above, align=center] at (quest_biometria.north) {};
+     \node [above, align=center] at (biometria.north) {Realizar\\biometria};
+     \node [above, align=center] at (etituloEmitido.north) {e-Titulo\\emitido};
+     \node [below, align=center] at (etituloReduzido.south) {e-Título\\reduzido};
+     \node [below, align=center] at (final.south) {$s_{10}$};
+     
+     % arestas
+     \draw[-{Stealth[round]}] (inicial) to [thick] (dados_cadastrais); 
+     \draw[-{Stealth[round]}] (dados_cadastrais) to [thick] (carrossel);
+     \draw[-{Stealth[round]}] (carrossel) to [thick] (user_senha);
+     \draw[-{Stealth[round]}] (carrossel) to [thick] (bloqueado);
+     \draw[-{Stealth[round]}] (user_senha) to [thick] (quest_biometria);
+     \draw[-{Stealth[round]}] (quest_biometria) to [thick] node[auto,swap]{\textit{sim}}(biometria);
+     \draw[-{Stealth[round]}] (biometria) to [thick] (aprovado);
+     \draw[-{Stealth[round]}] (aprovado) to [thick] node[auto]{\tiny \textit{aprovado}} (etituloEmitido);
+     \draw[-{Stealth[round]}] (etituloEmitido) to [thick] (final);
+     \draw[-{Stealth[round]}] (etituloReduzido) to [thick] (final);
+     \draw[-{Stealth[round]}] (bloqueado) to [thick, bend left] (dados_cadastrais);
+     \draw[-{Stealth[round]}] (quest_biometria) to [thick, out=270, in=180] node[auto,swap] {\textit{não}} (etituloReduzido);
+     \draw[-{Stealth[round]}] (aprovado) to [thick, out=270, in=135] node[auto,swap]{\small\textit{reprovado}} (etituloReduzido);
+\end{tikzpicture}
