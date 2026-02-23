@@ -18,6 +18,16 @@
 \usetikzlibrary{trees, shapes.geometric, positioning, arrows.meta, calc}
 
 
+%%%
+%%%% Introdução 5 minutos (Slides 1 a 4)
+%%%% Fundamentação 3 minutos (Slides 5 a 6)
+%%%% Metodologia 2 minutos (Slide 7 e 8)
+%%%% Resultados e Análises 8 minutos (Slides 9 a 13)
+%%%% Conclusão e Próximos Passos 2 minutos (Slides 14 e 15)
+%%%
+
+
+
 \title[]% [] is optional
 {%
   \textbf{Geração Automatizada de Testes Baseada em Model Checking:
@@ -60,48 +70,115 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Problema}{Desafio}
+\begin{frame}{Introdução}{Estudo de Caso: e-Título}
   \begin{itemize}
-    \item Como gerar testes de integração de forma sistemática e baseada em especificação?
-    \item Como garantir coerência entre regras de negócio, serviços REST e testes?
-    \item Como explorar contra-exemplos de Model Checking além da verificação?
+    \item Aplicativo oficial da Justiça Eleitoral brasileira, com mais de 57 milhões de eleitores ativos.
+    \item Arquitetura baseada em APIs REST, suportando processos críticos de identificação e emissão de documentos digitais.
+    \item Alta complexidade nos fluxos de autenticação, combinando componentes síncronos e assíncronos.
+    \item Demanda rigorosos requisitos de segurança, confiabilidade e disponibilidade.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Ideia Central}{Visão Geral}
+\begin{frame}{Introdução}{Definição do Problema}
   \begin{itemize}
-    \item Modelar comportamento do sistema.
-    \item Verificar propriedades com Model Checking.
-    \item Usar contra-exemplos como fonte de contratos e testes.
+    \item Testes tradicionais operam apenas na implementação e não exploram exaustivamente interações emergentes.
+    \item A eficácia do \textit{Model Checking} esbarra no distanciamento entre o modelo formal e a execução prática no ambiente de testes.
+    \item \textbf{Problema central:} Faltam mecanismos que transformem cenários críticos descobertos por verificação formal em restrições diretamente executáveis no código das APIs.
   \end{itemize}
 \end{frame}
 
-
-
-\begin{frame}{Fundamentação}{Model Checking}
+\begin{frame}{Introdução}{Objetivos do Trabalho}
   \begin{itemize}
-    \item Técnica formal para verificação automática de propriedades.
-    \item Baseada em exploração exaustiva de estados.
-    \item Propriedades expressas em LTL.
-    \item Ferramenta utilizada: SPIN.
+    \item \textbf{Objetivo Geral:} Desenvolver, avaliar e validar um método que guie a definição de contratos DbC a partir da análise de cenários via \textit{Model Checking} em sistemas críticos.
+    \item \textbf{Objetivos Específicos:}
+    \begin{enumerate}
+        \item Investigar as limitações de técnicas automatizadas de teste.
+        \item Explorar a viabilidade do \textit{Model Checking} como técnica complementar.
+        \item Definir método para geração de contratos DbC baseados na exploração sistemática de estados.
+        \item Aplicar a metodologia no estudo de caso do e-Título.
+    \end{enumerate}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fundamentação}{Design by Contract}
+\section{Estado da Arte e Fundamentação}
+\begin{frame}{Estado da Arte}{Revisão Bibliográfica}
   \begin{itemize}
-    \item Pré-condições.
+    \item O cenário atual foca vastamente em estratégias de caixa-preta e, mais recentemente, IA/LLMs para automação de testes REST.
+    \item Abordagens que empregam técnicas formais focam em invariantes e propriedades comportamentais, mas ainda são limitadas.
+    \item \textbf{Oportunidade:} Beneficiar-se do rigor matemático na identificação de violações sutis, integrando os achados às práticas de desenvolvimento.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentação Teórica}{Model Checking e Design by Contract (DbC)}
+  \begin{itemize}
+    \item \textbf{Model Checking (SPIN/Promela):} Exploração sistemática e exaustiva de todos os estados do sistema em busca de falhas lógicas.
+    \item \textbf{LTL (Linear Temporal Logic):} Linguagem de especificação de propriedades desejadas, verificando o tempo de execução e a progressão dos estados.
+    \item \textbf{Design by Contract (DbC):} Formalização de acordos entre cliente e fornecedor (Módulos/APIs) usando pré-condições, pós-condições e invariantes.
+  \end{itemize}
+\end{frame}
+
+\section{Metodologia}
+\begin{frame}{Metodologia}{Abordagem Geral e PDCA}
+  \begin{itemize}
+    \item Pesquisa aplicada, descritiva e experimental baseada no sistema e-Título.
+    \item Método iterativo estruturado no ciclo PDCA (\textit{Plan-Do-Check-Act}) para refinamento contínuo dos modelos.
+    \item \textbf{O ciclo de verificação inclui:}
+    \begin{enumerate}
+        \item Modelagem comportamental em linguagem de alto nível (Promela).
+        \item Verificação de propriedades via SPIN.
+        \item Análise de violações (\textit{contraexemplos}) e ajustes.
+        \item Extração das cláusulas DbC a partir da estrutura do modelo gerado.
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Metodologia}{Abordagem Geral e PDCA}
+  \begin{center}
+    \begin{figure}[hb]
+	    \resizebox{0.9\textwidth}{!}{
+        \input{img/FluxosModeloFormal.tikz}
+      }
+    \end{figure}
+  \end{center}
+\end{frame}
+
+\section{Resultados e Análises}
+\begin{frame}{Resultados Preliminares}{Modelagem Orientada a Fluxos (e-Título)}
+  \begin{itemize}
+    \item Foco no fluxo de \textit{onboarding}.
+    \begin{figure}[hb]
+	    \resizebox{0.9\textwidth}{!}{
+        \input{img/MiniDiagrama_fluxo.tikz}
+      }
+    \end{figure}
+    \item Modelagem do comportamento com mapeamento explícito de interações (diagramas de estado baseados nos serviços REST reais).
+    \item Abstração de detalhes internos (caixa-preta) para reduzir a explosão de estados, cobrindo sucesso, bloqueio ou emissões restritas.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados Preliminares}{Derivação de Cláusulas DbC}
+  \begin{itemize}
+    \item A extração de contratos baseia-se nas proposições atômicas presentes no modelo Promela/SPIN.
+    \item \textbf{Rotulação:} Estados rotulados como \texttt{call} (chamada à API) e \texttt{return} (retorno da API).
+    <<<<<<< Colocar figura do modelo com rotulações \texttt{call} e \texttt{return} destacadas. >>>>>>>>
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados Preliminares}{Derivação de Cláusulas DbC}
+  \begin{itemize}
+    \item \textbf{Pré-condições:} Extraídas via interseção lógica das proposições de todos os estados imediatamente \textit{antecessores} à chamada.
     \begin{figure}[hb]
 	    \resizebox{0.3\textwidth}{!}{
         \input{img/dbc-precond.tikz}
       }
     \end{figure}
-    \item Pós-condições.
+    \item \textbf{Pós-condições:} Interseção das proposições em todos os estados \textit{sucessores} ao retorno do método.
     \begin{figure}[hb]
 	    \resizebox{0.3\textwidth}{!}{
         \input{img/dbc-poscond.tikz}
       }
     \end{figure}
-    \item Invariantes.
+    \item \textbf{Invariantes:} Proposições comuns não alteradas entre chamada e retorno.
     \begin{figure}[hb]
 	    \resizebox{0.3\textwidth}{!}{
         \input{img/dbc-invariante.tikz}
@@ -115,119 +192,45 @@
     \end{figure}
      %Propriedade LTL é violada -> SPIN gera contra-exemplo ->  Contra-exemplo é convertido em contrato ->  Esse contrato vira oráculo do teste
   \end{itemize}
-
 \end{frame}
 
-\begin{frame}{Fundamentação}{Testes de Integração}
+
+\begin{frame}{Resultados Preliminares}{Tradução para Especificação de API (OpenAPI)}
   \begin{itemize}
-    \item Validação de contratos da API.
-    \item Sequências de chamadas.
-    \item Consistência dos estados entre operações.
-    % Muitos erros de integração ocorrem justamente nessas transições de estados intermediários.
-    \item OpenAPI como suporte à especificação.
+    \item As proposições lógicas identificadas pelo Model Checking são materializadas no formato OpenAPI.
+    \item \textbf{Exemplo Prático:}
+    \begin{itemize}
+        \item Proposições no modelo: $p_1: id \neq null$, e $p_2: questoes \in [43, 44]$.
+        \item Traduzido para a API: Parâmetros declarados como \texttt{required: true}, limitados usando \texttt{minimum} e \texttt{maximum}.
+    \end{itemize}
+    \item Aproxima o rigor formal (garantia por construção) das verificações automatizadas de integração.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Método Proposto}{Visão Geral}
+\begin{frame}{Resultados Preliminares}{Critérios de Avaliação do Método}
   \begin{itemize}
-    \item Modelagem comportamental em Promela.
-    \item Definição de propriedades LTL.
-    \item Execução do Model Checker.
-    \item Extração de contra-exemplos.
-    \item Geração de contratos e testes.
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}{Método Proposto}{Visão Geral}
-  \begin{center}
-    \begin{figure}[hb]
-	    \resizebox{0.9\textwidth}{!}{
-        \input{img/FluxosModeloFormal.tikz}
-      }
-    \end{figure}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Método Proposto}{Modelagem do Comportamento}
-  \begin{itemize}
-    \item Modelagem do fluxo de onboarding como sistema de estados.
-    \item Cada etapa representada como processo.
-    \begin{figure}[hb]
-	    \resizebox{0.9\textwidth}{!}{
-        \input{img/MiniDiagrama_fluxo.tikz}
-      }
-    \end{figure}
-    \item Estados do sistema explicitados por variáveis de controle.
-    \item Transições representam chamadas reais da API REST.
+    \item \textbf{Adequação da Modelagem:} Representatividade do modelo Promela comparado ao sistema em produção.
+    \item \textbf{Expressividade Contratual:} Avaliação se a cláusula DbC cobre integralmente as restrições inferidas pelo modelo.
+    \item \textbf{Taxa de Detecção:} Medir propriedades violadas encontradas pelo modelo que fugiram à suíte atual de testes.
+    \item \textbf{Utilidade Prática:} Avaliação qualitativa da viabilidade do método junto aos desenvolvedores no TSE.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Método Proposto}{Propriedades}
+
+\section{Conclusão e Próximos Passos}
+\begin{frame}{Conclusão Parcial e Próximos Passos}
   \begin{itemize}
-    \item Especificam comportamentos esperados.
-    \item Exemplo: após carrossel válido, senha deve ser definida.
-  \end{itemize}
-
-\begin{center}
-  \texttt{[] (carrossel\_ok -> <> senha\_definida)}
-\end{center}
-%Sempre que carrossel_ok ocorrer, então em algum momento no futuro senha_definida deverá ocorrer.
-
-\end{frame}
-
-\begin{frame}{Método Proposto}{Contra-exemplo}
-  \begin{itemize}
-    \item Caminho que viola propriedade.
-    \item Sequência concreta de estados.
-    \item Evidência de falha lógica.
+    \item O uso guiado de contraexemplos gerados pelo SPIN atua como fonte rica para a engenharia de requisitos comportamentais, definindo contratos DbC mais robustos.
+    \item \textbf{Próximas Etapas (Cronograma):}
+    \begin{itemize}
+        \item Ampliar o escopo dos fluxos de \textit{onboarding} do e-Título.
+        \item Realizar avaliação empírica das falhas detectadas usando os contratos gerados vs. testes tradicionais.
+        \item Avançar na automatização parcial da tradução de Promela/LTL para especificações DbC.
+        \item Submissão e defesa final da dissertação.
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Método Proposto}{Derivação de Contratos}
-  \begin{itemize}
-    \item Estados iniciais → pré-condições.
-    \item Estado final inválido → pós-condição.
-    \item Regras como cláusulas formais.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Método Proposto}{Geração de Testes}
-  \begin{itemize}
-    \item Pré-condições → dados de entrada.
-    \item Sequência → passos do teste.
-    \item Pós-condições → asserções.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Estudo de Caso}{Aplicativo e-Título}
-  \begin{itemize}
-    \item Fluxo de onboarding.
-    \resizebox{0.8\textwidth}{!}{
-	    \input{img/EstadosOnBoarding.tikz}
-    }
-    \item Carrossel, senha e biometria.
-    \item Sistema real e crítico.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Resultados}{Síntese}
-  \begin{itemize}
-    \item Propriedades violadas identificadas.
-    \item Contratos derivados automaticamente.
-    \item Casos de teste obtidos.
-    \item Detecção de cenários não cobertos.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Conclusão}{Síntese}
-  \begin{itemize}
-    \item Proposta de integração entre Model Checking, Design by Contract e testes de APIs REST.
-    \item Demonstração de que contra-exemplos podem ser sistematicamente convertidos em cláusulas contratuais e casos de teste.
-    \item Evidência de que a abordagem auxilia na identificação de falhas lógicas e de uso indevido de serviços.
-    \item Validação em um fluxo real do aplicativo e-Título.
-  \end{itemize}
-\end{frame}
 
 {
 \begin{frame}[plain,noframenumbering]
