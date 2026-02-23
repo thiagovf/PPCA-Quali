@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+    node distance=3.8cm,
+    box/.style={
+        rectangle,
+        draw=black!70,
+        rounded corners=6pt,
+        minimum width=3.4cm,
+        minimum height=1.4cm,
+        align=center,
+        font=\small,
+        fill=gray!8
+    },
+    arrow/.style={
+        -{Latex[length=3mm]},
+        thick
+    }
+]
+
+\node[box] (ltl) {Propriedade LTL\\violada};
+
+\node[box, right of=ltl] (spin) {SPIN\\gera contra-exemplo};
+
+\node[box, right of=spin] (contrato) {Derivação de\\Contrato (DbC)};
+
+\node[box, right of=contrato] (teste) {Contrato como\\oráculo de teste};
+
+\draw[arrow] (ltl) -- (spin);
+\draw[arrow] (spin) -- (contrato);
+\draw[arrow] (contrato) -- (teste);
+
+\end{tikzpicture}

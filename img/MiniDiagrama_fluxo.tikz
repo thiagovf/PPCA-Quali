@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+    node distance=4cm,
+    box/.style={
+        rectangle,
+        draw=black!70,
+        rounded corners=6pt,
+        minimum width=3cm,
+        minimum height=1.1cm,
+        align=center,
+        font=\small,
+        fill=gray!8
+    },
+    arrow/.style={
+        -{Latex[length=3mm]},
+        thick
+    }
+]
+
+\node[box] (bio) {Dados\\Biográficos};
+
+\node[box, right of=bio] (car) {Carrossel};
+
+\node[box, right of=car] (senha) {Senha};
+
+\node[box, right of=senha] (bio2) {Biometria};
+
+\draw[arrow] (bio) -- (car);
+\draw[arrow] (car) -- (senha);
+\draw[arrow] (senha) -- (bio2);
+
+\end{tikzpicture}

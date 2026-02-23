@@ -108,6 +108,12 @@
       }
     \end{figure}
     \item Contratos como oráculos de teste.
+    \begin{figure}[hb]
+	    \resizebox{\textwidth}{!}{
+        \input{img/ContratosOracle.tikz}
+      }
+    \end{figure}
+     %Propriedade LTL é violada -> SPIN gera contra-exemplo ->  Contra-exemplo é convertido em contrato ->  Esse contrato vira oráculo do teste
   \end{itemize}
 
 \end{frame}
@@ -116,7 +122,8 @@
   \begin{itemize}
     \item Validação de contratos da API.
     \item Sequências de chamadas.
-    \item Estados intermediários.
+    \item Consistência dos estados entre operações.
+    % Muitos erros de integração ocorrem justamente nessas transições de estados intermediários.
     \item OpenAPI como suporte à especificação.
   \end{itemize}
 \end{frame}
@@ -142,11 +149,17 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Método Proposto}{Modelagem}
+\begin{frame}{Método Proposto}{Modelagem do Comportamento}
   \begin{itemize}
-    \item Processos representando serviços.
-    \item Estados explícitos.
-    \item Comunicação por variáveis globais.
+    \item Modelagem do fluxo de onboarding como sistema de estados.
+    \item Cada etapa representada como processo.
+    \begin{figure}[hb]
+	    \resizebox{0.9\textwidth}{!}{
+        \input{img/MiniDiagrama_fluxo.tikz}
+      }
+    \end{figure}
+    \item Estados do sistema explicitados por variáveis de controle.
+    \item Transições representam chamadas reais da API REST.
   \end{itemize}
 \end{frame}
 
@@ -159,6 +172,7 @@
 \begin{center}
   \texttt{[] (carrossel\_ok -> <> senha\_definida)}
 \end{center}
+%Sempre que carrossel_ok ocorrer, então em algum momento no futuro senha_definida deverá ocorrer.
 
 \end{frame}
 
