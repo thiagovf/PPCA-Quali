@@ -54,6 +54,10 @@
 
 \begin{document}
 
+%%% Considerações Eduardo:
+%% Subtítulo para a parte branca.
+%% Trazer Fundamentação Teórica Model Checking e Design by Contract (DbC) para antes da Introdução Objetivos do Trabalho
+
 % Title page
 {%
 \begin{frame}[plain,noframenumbering]
@@ -66,7 +70,7 @@
     \item APIs REST são base de sistemas modernos e críticos.
     \item Erros de integração frequentemente não são detectados por testes tradicionais.
     \item Testes manuais e exploratórios possuem baixa sistematização.
-    \item Há lacuna entre modelos formais e práticas de teste de software.
+    \item Lacuna entre modelos formais e práticas de teste de software.
   \end{itemize}
 \end{frame}
 
@@ -160,7 +164,11 @@
   \begin{itemize}
     \item A extração de contratos baseia-se nas proposições atômicas presentes no modelo Promela/SPIN.
     \item \textbf{Rotulação:} Estados rotulados como \texttt{call} (chamada à API) e \texttt{return} (retorno da API).
-    <<<<<<< Colocar figura do modelo com rotulações \texttt{call} e \texttt{return} destacadas. >>>>>>>>
+    \begin{figure}[hb]
+	    \resizebox{0.8\textwidth}{!}{
+        \input{img/rotulacaoEstados.tikz}
+      }
+    \end{figure}
   \end{itemize}
 \end{frame}
 

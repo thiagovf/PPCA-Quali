@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771856893.86141 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1771856895.24232 0
-  "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" 1771856893.67692 10016 cc05746c8aedac40abe16c0dc64a8bb0 ""
+["pdflatex"] 1772021310.35156 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1772021311.77216 0
+  "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" 1772021310.18253 10221 2f5821a9fc1b69e95a078ded0572fc53 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -268,10 +268,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761848824 3345740 d4369792d5e2ce49bfce60f195e30df8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Feathergraphics/as_vert_cor.jpg" 1763825014 152420 c2e525c0ce516f74fa7791282a662d91 ""
-  "Feathertheme.aux" 1771856895.14134 4154 2cf437b372fdde1e3fafa3d2dfbbb74f "pdflatex"
-  "Feathertheme.nav" 1771856895.14228 2540 59325322a89753245c3361308a4106f8 "pdflatex"
-  "Feathertheme.out" 1771856895.14215 758 274501be541e8e727d6c7941d44e645d "pdflatex"
-  "Feathertheme.tex" 1771856893.67692 10016 cc05746c8aedac40abe16c0dc64a8bb0 ""
+  "Feathertheme.aux" 1772021311.6725 4154 2cf437b372fdde1e3fafa3d2dfbbb74f "pdflatex"
+  "Feathertheme.nav" 1772021311.67347 2540 59325322a89753245c3361308a4106f8 "pdflatex"
+  "Feathertheme.out" 1772021311.67333 758 274501be541e8e727d6c7941d44e645d "pdflatex"
+  "Feathertheme.tex" 1772021310.18253 10221 2f5821a9fc1b69e95a078ded0572fc53 ""
   "beamercolorthemeFeather.sty" 1763825014 2263 5d7d9946a3d266fa1d2d3a249775e7d5 ""
   "beamerinnerthemeFeather.sty" 1763825014 4044 a2a5d84acf069c5b3211193f9325426f ""
   "beamerouterthemeFeather.sty" 1763825014 12273 51aed6ae3b1eea374180e80679da48ec ""
@@ -282,6 +282,7 @@
   "img/dbc-invariante.tikz" 1771609693.48296 416 06910ca5cefe8950ec7dd7067930ff7f ""
   "img/dbc-poscond.tikz" 1771609693.48514 356 302b25292edb875cb40f9ffea07301e4 ""
   "img/dbc-precond.tikz" 1771609693.48659 336 96944440c570d7ac06dbe49e6282e203 ""
+  "img/rotulacaoEstados.tikz" 1772021249.73878 1305 b2e996ffaa2fce345be71d13068dc563 ""
   (generated)
   "Feathertheme.aux"
   "Feathertheme.log"

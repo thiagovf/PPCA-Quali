@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+    [simple/.style={circle,draw=black,minimum size=8mm},
+     api/.style={circle,draw=blue,minimum size=10mm,ultra thick},
+     rotulo/.style={align=center,below, blue,font=\itshape}]
+     % nodos do modelo
+     \node(s1) at (0,0) [simple] {$s_1$};
+     \node(s2) at (2,0) [simple] {$s_2$};
+     \node(s3) at (2,2) [simple] {$s_3$};
+     \node(s4) at (0,3) [simple] {$s_4$};
+     \node(s5) at (2,4) [simple] {$s_5$};
+     \node(call) at (4,3) [api]    {$s_6$};
+     \node(return) at (7,3) [api]    {$s_7$};
+     \node(s8) at (9,4) [simple] {$s_8$};
+     \node(s9) at (9,2) [simple] {$s_9$};
+     \node(s10) at (11,2)[simple] {$s_{10}$};
+
+
+     % nodos de rótulo
+     \node at (call.south) [rotulo]{call \\ perguntas};
+     \node at (return.south) [rotulo]{return \\ perguntas};
+
+     % transicoes
+     \draw [-{Stealth[round]}] (s1) to (s2);
+     \draw [-{Stealth[round]}] (s4) to (s3);
+     \draw [-{Stealth[round]}] (s4) to (s5);
+     \draw [-{Stealth[round]}] (s2) to (call);
+     \draw [-{Stealth[round]}] (s3) to (call);
+     \draw [-{Stealth[round]}] (s5) to (call);
+     \draw [-{Stealth[round]}] (return) to (s8);
+     \draw [-{Stealth[round]}] (return) to (s9);
+     \draw [-{Stealth[round]}] (s9) to (s10);
+     \draw [-,dotted, thick] (call) to (return);
+\end{tikzpicture}
