@@ -1,0 +1,50 @@
+
+\begin{tikzpicture}[
+    node distance=2.8cm,
+    every node/.style={
+        draw,
+        rectangle,
+        rounded corners,
+        align=left,
+        minimum width=6.2cm,
+        minimum height=3.4cm
+    },
+    arrow/.style={->, thick}
+]
+
+% Left - Propositions
+\node (pre) {
+\textbf{Pré-condição (modelo)}\\[4pt]
+$p_1:$ \texttt{id != null}\\
+$p_2:$ \texttt{questoes >= 2 \&\& questoes <= 5}
+};
+
+% Middle - Translation
+\node (map) [right=of pre] {
+\textbf{Tradução}\\[4pt]
+Restrições para o endpoint\\
+\texttt{/carr/perguntas/\{id\}/questoes/\{questoes\}}\\[6pt]
+Parâmetros obrigatórios\\
+e intervalo de valores
+};
+
+% Right - OpenAPI
+\node (oas) [right=of map] {
+\textbf{OpenAPI}\\[4pt]
+\texttt{parameters:}\\
+\ \ \texttt{- name: id}\\
+\ \ \ \texttt{in: path}\\
+\ \ \ \texttt{\textcolor{red}{required}: true}\\[4pt]
+\ \ \texttt{- name: questoes}\\
+\ \ \ \texttt{in: path}\\
+\ \ \ \texttt{\textcolor{red}{required}: true}\\
+\ \ \ \texttt{\textcolor{red}{type}: integer}\\
+\ \ \ \texttt{\textcolor{red}{minimum}: 2}\\
+\ \ \ \texttt{\textcolor{red}{maximum}: 5}
+};
+
+% Arrows
+\draw[arrow] (pre) -- (map);
+\draw[arrow] (map) -- (oas);
+
+\end{tikzpicture}

@@ -169,6 +169,7 @@
         \input{img/rotulacaoEstados.tikz}
       }
     \end{figure}
+    \item Os estados {s2, s3,s5} são estados anteriores à chamada e os {s8, s9} são os sucessores. As proposições deles serão a base das cláusulas DbC.
   \end{itemize}
 \end{frame}
 
@@ -207,10 +208,11 @@
   \begin{itemize}
     \item As proposições lógicas identificadas pelo Model Checking são materializadas no formato OpenAPI.
     \item \textbf{Exemplo Prático:}
-    \begin{itemize}
-        \item Proposições no modelo: $p_1: id \neq null$, e $p_2: questoes \in [43, 44]$.
-        \item Traduzido para a API: Parâmetros declarados como \texttt{required: true}, limitados usando \texttt{minimum} e \texttt{maximum}.
-    \end{itemize}
+    \begin{figure}[hb]
+	    \resizebox{\textwidth}{!}{
+        \input{img/especPreOpenAPI.tikz}
+      }
+    \end{figure}
     \item Aproxima o rigor formal (garantia por construção) das verificações automatizadas de integração.
   \end{itemize}
 \end{frame}
