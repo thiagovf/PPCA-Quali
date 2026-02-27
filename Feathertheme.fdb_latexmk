@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1772114416.55295 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1772114417.97002 0
+["pdflatex"] 1772233533.03012 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1772233534.44911 0
   "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" 1772114416.34171 10228 52a71ee355a67991b1e568c49209a704 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -264,16 +264,16 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761848824 3345740 d4369792d5e2ce49bfce60f195e30df8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Feathergraphics/as_vert_cor.jpg" 1763825014 152420 c2e525c0ce516f74fa7791282a662d91 ""
-  "Feathertheme.aux" 1772114417.87409 4154 2cf437b372fdde1e3fafa3d2dfbbb74f "pdflatex"
-  "Feathertheme.nav" 1772114417.87505 2540 59325322a89753245c3361308a4106f8 "pdflatex"
-  "Feathertheme.out" 1772114417.87492 758 274501be541e8e727d6c7941d44e645d "pdflatex"
+  "Feathertheme.aux" 1772233534.35608 4154 2cf437b372fdde1e3fafa3d2dfbbb74f "pdflatex"
+  "Feathertheme.nav" 1772233534.35708 2540 59325322a89753245c3361308a4106f8 "pdflatex"
+  "Feathertheme.out" 1772233534.35693 758 274501be541e8e727d6c7941d44e645d "pdflatex"
   "Feathertheme.tex" 1772114416.34171 10228 52a71ee355a67991b1e568c49209a704 ""
   "beamercolorthemeFeather.sty" 1763825014 2263 5d7d9946a3d266fa1d2d3a249775e7d5 ""
   "beamerinnerthemeFeather.sty" 1763825014 4044 a2a5d84acf069c5b3211193f9325426f ""
   "beamerouterthemeFeather.sty" 1763825014 12273 51aed6ae3b1eea374180e80679da48ec ""
   "beamerthemeFeather.sty" 1763825014 2374 3ba8ec5e8836c2c5658479b24cd30c84 ""
   "img/ContratosOracle.tikz" 1771850395.31712 709 85dfaf2e1e6bf5f13ec947855270e11c ""
-  "img/FluxosModeloFormal.tikz" 1771786449.66956 1464 58cc18c04216bcd810d69d3ca2d7960c ""
+  "img/FluxosModeloFormal.tikz" 1772233532.61845 1484 edf60ab73f6c8312e1b4f9465bc62197 ""
   "img/MiniDiagrama_fluxo.tikz" 1771851119.0709 618 0456adb1851b6b323912372d98012a56 ""
   "img/dbc-invariante.tikz" 1771609693.48296 416 06910ca5cefe8950ec7dd7067930ff7f ""
   "img/dbc-poscond.tikz" 1771609693.48514 356 302b25292edb875cb40f9ffea07301e4 ""
