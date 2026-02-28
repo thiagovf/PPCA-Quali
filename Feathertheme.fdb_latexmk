@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1772279628.56391 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1772279630.07603 0
-  "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" 1772279628.31229 10880 136d0c29a01e23a2ee21f40b566bdc31 ""
+["pdflatex"] 1772280182.6631 "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" "Feathertheme.pdf" "Feathertheme" 1772280184.17434 0
+  "/Users/thiagofernandes/dev/git/PPCA-Quali/Feathertheme.tex" 1772280182.45665 10689 b28dee6dd1cb87dabdbe4b835d8ba573 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -264,10 +264,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761848824 3345740 d4369792d5e2ce49bfce60f195e30df8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Feathergraphics/as_vert_cor.jpg" 1763825014 152420 c2e525c0ce516f74fa7791282a662d91 ""
-  "Feathertheme.aux" 1772279629.97525 4284 c29a5de83a7ab03cfa4284347056c6cd "pdflatex"
-  "Feathertheme.nav" 1772279629.97628 2634 e5e52bf2c7ec9510062ad4ae1a0d2e1f "pdflatex"
-  "Feathertheme.out" 1772279629.97614 758 274501be541e8e727d6c7941d44e645d "pdflatex"
-  "Feathertheme.tex" 1772279628.31229 10880 136d0c29a01e23a2ee21f40b566bdc31 ""
+  "Feathertheme.aux" 1772280184.07627 4284 c29a5de83a7ab03cfa4284347056c6cd "pdflatex"
+  "Feathertheme.nav" 1772280184.07729 2634 e5e52bf2c7ec9510062ad4ae1a0d2e1f "pdflatex"
+  "Feathertheme.out" 1772280184.07712 758 274501be541e8e727d6c7941d44e645d "pdflatex"
+  "Feathertheme.tex" 1772280182.45665 10689 b28dee6dd1cb87dabdbe4b835d8ba573 ""
   "beamercolorthemeFeather.sty" 1763825014 2263 5d7d9946a3d266fa1d2d3a249775e7d5 ""
   "beamerinnerthemeFeather.sty" 1763825014 4044 a2a5d84acf069c5b3211193f9325426f ""
   "beamerouterthemeFeather.sty" 1763825014 12273 51aed6ae3b1eea374180e80679da48ec ""
