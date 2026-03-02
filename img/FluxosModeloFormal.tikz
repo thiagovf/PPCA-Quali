@@ -4,8 +4,8 @@
 
     % node (name) at (,) [type]{label};
     \node[artefato] (def_alt_niv) at(0,6)  {Definição em \\alto nível};
-    \node[artefato] (cod_api)     at(0,3)  {Código Promela \\API};
-    \node[artefato] (mod_form)    at(0,0)  {Modelo Formal \\Compilado};
+    \node[artefato] (cod_api)     at(0,3)  {Código API};
+    \node[artefato] (mod_form)    at(0,0)  {Modelo \\Formal};
     \node[atividade](valid)       at(5,0)  {Verificação \\propriedades \\LTL};
     \node[artefato] (claus_dbc)   at(11,0) {Cláusulas \\DBC};
 

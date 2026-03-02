@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+    [api/.style={circle,draw=blue,ultra thick, minimum size=10mm},
+     simple/.style={circle,draw=black,minimum size=8mm},
+     rotulo/.style={align=center,below,blue}]
+     % nodos do modelo
+     \node (s1) at (0,0)[simple]{$a, b, d$};
+     \node (s2) at (2,0)[simple]{$a,b$};
+     \node (s3) at (0,3)[simple]{$a,b,c$};
+     \node (s4) at (2,4)[simple]{$a, b, c$};
+     \node (s5) at (2,2)[simple]{$a, b$};
+     \node (call) at (4,2)[api]{};
+     \node (return) at (6,2)[api]{};
+     \node (s8) at (8,3)[simple]{$a, b, c$};
+     \node (s9) at (8,1)[simple]{$a, b, c, d$};
+     \node (s10) at (10,1)[simple]{$a, b, d$};
+
+     % nodos de rotulo
+     \node at (call.south) [rotulo]{\textit{call}};
+     \node at (return.south) [rotulo]{\textit{return}};
+     \node at (s1.south) [below]{$s_1$};
+     \node at (s2.south) [below]{$s_2$};
+     \node at (s3.south) [below]{$s_3$};
+     \node at (s4.south) [below]{$s_4$};
+     \node at (s5.south) [below]{$s_5$};
+     \node at (s8.south) [below]{$s_8$};
+     \node at (s9.south) [below]{$s_9$};
+     \node at (s10.south) [below]{$s_{10}$};
+
+     % transições
+     \draw[-{Stealth[round]}] (s1) to (s2);
+     \draw[-{Stealth[round]}] (s2) to (call);
+     \draw[-{Stealth[round]}] (s3) to (s4);
+     \draw[-{Stealth[round]}] (s3) to (s5);
+     \draw[-{Stealth[round]}] (s4) to (call);
+     \draw[-{Stealth[round]}] (s5) to (call);
+     \draw[-, dotted, thick] (call) to (return);
+     \draw[-{Stealth[round]}] (return) to (s8);
+     \draw[-{Stealth[round]}] (return) to (s9);
+     \draw[-{Stealth[round]}] (s9) to (s10);
+     
+\end{tikzpicture}

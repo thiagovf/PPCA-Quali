@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    [api/.style={circle,draw=blue,ultra thick, minimum size=10mm},
+     simple/.style={circle,draw=black, minimum size=8mm, align=center},
+     rotulo/.style={align=center,below,blue}]
+     % nodos do modelo
+     \node (return) at (0,1) [api]{};
+     \node (s1) at (2,0)[simple]{$d,e$};
+     \node (s2) at (2,2)[simple]{$d,e$};
+     \node (s3) at (4,0)[simple]{$d,e$};
+     \node (s4) at (4,2)[simple]{$d,f$};
+
+     % nodos de rotulo
+     \node at (return.south) [rotulo]{\textit{return}};
+     \node at (s1.south) [below]{$s_1$};
+     \node at (s2.south) [below]{$s_2$};
+     \node at (s3.south) [below]{$s_3$};
+     \node at (s4.south) [below]{$s_4$};
+
+     % transições
+     \draw [-{Stealth[round]}] (return) to (s1); 
+     \draw [-{Stealth[round]}] (return) to (s2); 
+     \draw [-{Stealth[round]}] (s1) to (s3); 
+     \draw [-{Stealth[round]}] (s2) to (s4); 
+     \draw [-{Stealth[round]}] (s2) to (s3); 
+     
+\end{tikzpicture}

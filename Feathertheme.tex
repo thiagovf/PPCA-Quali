@@ -15,23 +15,13 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{tikz}
+\usepackage{pdfcomment}
 \usetikzlibrary{trees, shapes.geometric, positioning, arrows.meta, calc}
-
-
-%%%
-%%%% Introdução 5 minutos (Slides 1 a 4)
-%%%% Fundamentação 3 minutos (Slides 5 a 6)
-%%%% Metodologia 2 minutos (Slide 7 e 8)
-%%%% Resultados e Análises 8 minutos (Slides 9 a 13)
-%%%% Conclusão e Próximos Passos 2 minutos (Slides 14 e 15)
-%%%
-
 
 
 \title[]% [] is optional
 {%
-  \textbf{Geração Automatizada de Testes Baseada em Model Checking:
-  \\ Um Estudo Aplicado ao e-Título}
+  \textbf{Definição de Cláusulas DbC Baseada em Model Checking: Um Estudo Aplicado ao e-Título}
 }
 
 \subtitle[Geração Automatizada de Testes Baseada em Model Checking]
@@ -50,7 +40,7 @@
   Universidade de Brasília
 }
 
-\date{\today}
+\date{3 de março de 2026}
 
 \begin{document}
 
@@ -66,7 +56,7 @@
     \item APIs REST são base de sistemas modernos e críticos.
     \item Erros de integração frequentemente não são detectados por testes tradicionais.
     \item Testes manuais e exploratórios possuem baixa sistematização.
-    \item Lacuna entre modelos formais e práticas de teste de software.
+    \item Lacuna entre verificações formais e práticas de teste de software.
   \end{itemize}
 \end{frame}
 
@@ -81,7 +71,7 @@
 
 \begin{frame}{Introdução}{Definição do Problema}
   \begin{itemize}
-    \item Testes tradicionais operam apenas na implementação e não exploram exaustivamente interações emergentes.
+    \item Testes tradicionais operam apenas na implementação e não exploram exaustivamente \textbf{\pdftooltip{DbC}{interações emergentes}{dois módulos interagem e surgem comportamentos não previstos}}.
     \item A eficácia do \textit{Model Checking} esbarra no distanciamento entre o modelo formal e a execução prática no ambiente de testes.
     \item \textbf{Problema central:} Faltam mecanismos que transformem cenários críticos descobertos por verificação formal em restrições diretamente executáveis no código das APIs.
   \end{itemize}
@@ -89,7 +79,7 @@
 
 \begin{frame}{Introdução}{Objetivos do Trabalho}
   \begin{itemize}
-    \item \textbf{Questão de Pesquisa:} É possível integrar Model Checking e verificação automatizada baseada em contratos DbC, por meio da transformação sistemática de contraexemplos formais, de modo a aprimorar a detecção de falhas em APIs REST críticas?
+    \item \textbf{Questão de Pesquisa:} A integração de \textit{Model Checking} com verificação automatizada de propriedades expressas em \textbf{\pdftooltip{DbC}{é uma técnica de verificação e validação de software}} pode aprimorar a detecção de falhas e garantir maior confiabilidade em sistemas de alta relevância operacional?
     \item \textbf{Objetivo Geral:} Desenvolver, avaliar e validar um método que guie a definição de contratos DbC a partir da análise de cenários via \textit{Model Checking} em sistemas críticos.
     \item \textbf{Objetivos Específicos:}
     \begin{enumerate}
@@ -103,8 +93,8 @@
 
 \begin{frame}{Introdução}{Contribuição Proposta}
   \begin{itemize}
-    \item Mecanismo sistemático de transformação de contraexemplos em contratos DbC.
-    \item Integração entre Model Checking e especificação OpenAPI.
+    \item Mecanismo sistemático de transformação de proposições dos estados em contratos DbC.
+    \item Integração entre Cláusulas DbC e especificação OpenAPI.
     \item Uso de contratos como oráculos automatizados de teste.
     \item Aplicação prática em sistema crítico real.
   \end{itemize}
@@ -165,6 +155,9 @@
     \end{figure}
     \item Modelagem do comportamento com mapeamento explícito de interações (diagramas de estado baseados nos serviços REST reais).
     \item Abstração de detalhes internos (caixa-preta) para reduzir a explosão de estados, cobrindo sucesso, bloqueio ou emissões restritas.
+    \begin{figure}[hb]
+	    \includegraphics[width=1\textwidth]{img/diagramaSequencia.png}
+    \end{figure}
   \end{itemize}
 \end{frame}
 
@@ -186,19 +179,23 @@
     \item \textbf{Pré-condições:} Extraídas via interseção lógica das proposições de todos os estados imediatamente \textit{antecessores} à chamada.
     \begin{figure}[hb]
 	    \resizebox{0.3\textwidth}{!}{
-        \input{img/dbc-precond.tikz}
+        \input{img/regraPre.tikz}
       }
     \end{figure}
     \item \textbf{Pós-condições:} Interseção das proposições em todos os estados \textit{sucessores} ao retorno do método.
     \begin{figure}[hb]
 	    \resizebox{0.3\textwidth}{!}{
-        \input{img/dbc-poscond.tikz}
+        \input{img/regraPos.tikz}
       }
     \end{figure}
+  \end{itemize}
+\end{frame}
+\begin{frame}{Resultados Preliminares}{Derivação de Cláusulas DbC}
+  \begin{itemize}
     \item \textbf{Invariantes:} Proposições comuns não alteradas entre chamada e retorno.
     \begin{figure}[hb]
-	    \resizebox{0.3\textwidth}{!}{
-        \input{img/dbc-invariante.tikz}
+	    \resizebox{0.6\textwidth}{!}{
+        \input{img/regraInvariante.tikz}
       }
     \end{figure}
     \item Contratos como oráculos de teste.

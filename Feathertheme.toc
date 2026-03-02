@@ -3,4 +3,4 @@
 \beamer@sectionintoc {2}{Estado da Arte e Fundamentação}{7}{0}{2}
 \beamer@sectionintoc {3}{Metodologia}{9}{0}{3}
 \beamer@sectionintoc {4}{Resultados e Análises}{11}{0}{4}
-\beamer@sectionintoc {5}{Conclusão e Próximos Passos}{16}{0}{5}
+\beamer@sectionintoc {5}{Conclusão e Próximos Passos}{17}{0}{5}
